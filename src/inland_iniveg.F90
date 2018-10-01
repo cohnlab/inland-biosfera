@@ -264,14 +264,9 @@ subroutine iniveg (isimveg, irestart)
                plai(i,9)  = exist(i,9)  / float(ishrub) * plai_init(3,inveg)
                plai(i,10) = exist(i,10) / float(ishrub) * plai_init(3,inveg)
 
-               if ((inveg.eq.9).or.(inveg.eq.10)) then
-                  if (tw(i).gt.22.0) then
+               if (((inveg.eq.9).or.(inveg.eq.10)).and.(nint(exist(i,11)).eq.1)) then
                      plai(i,11) = exist(i,11) * 0.80 * plai_init(4,inveg)
                      plai(i,12) = exist(i,12) * 0.20 * plai_init(4,inveg)
-                  else
-                     plai(i,11) = exist(i,11) * 0.00 * plai_init(4,inveg)
-                     plai(i,12) = exist(i,12) * 1.00 * plai_init(4,inveg)
-                  endif
                else
                   plai(i,11) = exist(i,11) / float(igrass) * plai_init(4,inveg)
                   plai(i,12) = exist(i,12) / float(igrass) * plai_init(4,inveg)
@@ -399,7 +394,7 @@ subroutine iniveg (isimveg, irestart)
 #endif /* SINGLE_POINT_MODEL */
 
 ! fractional cover
-#ifndef SINGLE_POINT_MODE
+#ifndef SINGLE_POINT_MODEL
             fu(i) = (1.0 - exp(-wood)) / (1.0 - exp(-woodnorm))
             fl(i) = totlail(i) / 1.0
 #endif /* SINGLE_POINT_MODEL */
