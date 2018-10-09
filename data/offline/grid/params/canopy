@@ -69,16 +69,16 @@ c 16: sugarcane
 #--------------------------------------------------------------------
 # C3 and C4 physiology-specific parameters
 #--------------------------------------------------------------------
-  0.080    ! alpha3 - C3 intrinsic quantum efficiency (dimensionless)
-  0.950    ! theta3 - C3 photosynthesis coupling coefficient
-  0.990    ! beta3  - C3 photosynthesis coupling coefficient
-  0.990    ! betac3 - C3 photosynthesis coupling coefficient for C3 crops
-  0.067    ! alpha4 - C4 intrinsic quantum efficiency (dimensionless)
-  0.970    ! theta4 - C4 photosynthesis coupling coefficient
-  0.800    ! beta4  - C4 photosynthesis coupling coefficient 
-  0.970    ! thetac4- C4 photosynthesis coupling coefficient for C4 crops
-  0.800    ! betac4 - C4 photosynthesis coupling coef for C4 crops
-  0.950    ! thetac3- C3 photosynthesis coupling coef for C3 crops
+  0.080           ! alpha3 - C3 intrinsic quantum efficiency (dimensionless)
+  0.950           ! theta3 - C3 photosynthesis coupling coefficient
+  0.990           ! beta3  - C3 photosynthesis coupling coefficient
+  0.990           ! betac3 - C3 photosynthesis coupling coefficient for C3 crops
+  0.067           ! alpha4 - C4 intrinsic quantum efficiency (dimensionless)
+  0.970           ! theta4 - C4 photosynthesis coupling coefficient
+  0.800           ! beta4  - C4 photosynthesis coupling coefficient 
+  0.970           ! thetac4- C4 photosynthesis coupling coefficient for C4 crops
+  0.800           ! betac4 - C4 photosynthesis coupling coef for C4 crops
+  0.950           ! thetac3- C3 photosynthesis coupling coef for C3 crops
 #====================================================================
 
 #--------------------------------------------------------------------
@@ -89,15 +89,15 @@ c 16: sugarcane
 # coefb    : 'b' coefficients for stomatal conductance relationship
 # gsmin    : absolute minimum stomatal conductances
 #-------------------------------------------------
-# gamma  coefm  coefb    gsmin   Physiol. Class
-#-------------------------------------------------
-  0.015   10.0   0.01  0.00001  ! Broadleaf trees
-  0.015    6.0   0.01  0.00001  ! Conifer trees 
-  0.015    9.0   0.01  0.00001  ! Shrubs
-  0.030    4.0   0.04  0.00001  ! C4 grasses
-  0.015    9.0   0.01  0.00001  ! C3 grasses
-  0.015	   9.0   0.01  0.00001  ! C3 crops (SOJA)
-  0.012	   2.6   0.04  0.00001  ! C4 crops
+# gamma  coefm       coefb           gsmin   Physiol. Class
+#----------------------------------------------------------------
+  0.015   10.0        0.01         0.00001  ! Broadleaf trees
+  0.015    6.0        0.01         0.00001  ! Conifer trees 
+  0.015    9.0        0.01         0.00001  ! Shrubs
+  0.030    4.0        0.04         0.00001  ! C4 grasses
+  0.015    9.0        0.01         0.00001  ! C3 grasses
+  0.015	   9.0        0.01         0.00001  ! C3 crops (SOJA)
+  0.012	   2.6        0.04         0.00001  ! C4 crops
 #  0.015	   9.0   0.01  0.00001  ! C3 crops (original..)
 #=================================================
 
@@ -117,24 +117,24 @@ c 16: sugarcane
 # Castanho HP, 2013 comented vegetation properties, these were included as netcdf file in INPUT that allows use of
 # spatial heterogeneous parameterization by PFT,
 #------------------------------------------------------------------------
-# vmax_pft  specla  tauleaf  tauroot tauwood0 aleaf  aroot  awood    PFT
-#------------------------------------------------------------------------
-  65.0e-06   25.0    1.01      1.0     25.0    0.30   0.20   0.50  !   1 
-  65.0e-06   25.0    1.00      1.0     25.0    0.30   0.20   0.50  !   2 
-  40.0e-06   25.0    1.00      1.0     25.0    0.30   0.20   0.50  !   3 
-  30.0e-06   12.5    2.00      1.0     50.0    0.30   0.40   0.30  !   4 
-  30.0e-06   25.0    1.00      1.0     50.0    0.30   0.20   0.50  !   5 
-  25.0e-06   12.5    2.50      1.0    100.0    0.30   0.40   0.30  !   6 
-  30.0e-06   25.0    1.00      1.0    100.0    0.30   0.20   0.50  !   7 
-  30.0e-06   25.0    1.00      1.0    100.0    0.30   0.20   0.50  !   8 
-  27.5e-06   12.5    1.50      1.0      5.0    0.45   0.40   0.15  !   9 
-  27.5e-06   25.0    1.00      1.0      5.0    0.45   0.35   0.20  !  10 
-  15.0e-06   20.0    1.25      1.0    999.0    0.45   0.55   0.00  !  11 
-  25.0e-06   25.0    1.50      1.0    999.0    0.45   0.55   0.00  !  12 
-  45.0e-06   27.4    1.0     200.0    999.0  999.0  999.0  999.0   !  13  soybean (50 geovane)  52.5
-  25.0e-06   32.5    1.0     200.0    999.0  999.0  999.0  999.0   !  14  maize
-  50.0e-06   50.0    1.0     200.0    999.0  999.0  999.0  999.0   !  15  wheat
-  45.0e-06   20.0  135.0     400.0    999.0  999.0  999.0  999.0   !  16  sugarcane
+# vmax_pft       specla  tauleaf  tauroot tauwood0 aleaf  aroot  awood    PFT
+#-----------------------------------------------------------------------------------
+  65.0e-06        25.0          1.01      1.0     25.0    0.30   0.20   0.50  !   1 
+  65.0e-06        25.0          1.00      1.0     25.0    0.30   0.20   0.50  !   2 
+  40.0e-06        25.0          1.00      1.0     25.0    0.30   0.20   0.50  !   3 
+  30.0e-06        12.5          2.00      1.0     50.0    0.30   0.40   0.30  !   4 
+  30.0e-06        25.0          1.00      1.0     50.0    0.30   0.20   0.50  !   5 
+  25.0e-06        12.5          2.50      1.0    100.0    0.30   0.40   0.30  !   6 
+  30.0e-06        25.0          1.00      1.0    100.0    0.30   0.20   0.50  !   7 
+  30.0e-06        25.0          1.00      1.0    100.0    0.30   0.20   0.50  !   8 
+  27.5e-06        12.5          1.50      1.0      5.0    0.45   0.40   0.15  !   9 
+  27.5e-06        25.0          1.00      1.0      5.0    0.45   0.35   0.20  !  10 
+  15.0e-06        20.0          1.25      1.0    999.0    0.45   0.55   0.00  !  11 
+  25.0e-06        25.0          1.50      1.0    999.0    0.45   0.55   0.00  !  12 
+  45.0e-06        27.4          1.0     200.0    999.0  999.0  999.0  999.0   !  13  soybean (50 geovane)  52.5
+  25.0e-06        32.5          1.0     200.0    999.0  999.0  999.0  999.0   !  14  maize
+  50.0e-06        50.0          1.0     200.0    999.0  999.0  999.0  999.0   !  15  wheat
+  45.0e-06        20.0        135.0     400.0    999.0  999.0  999.0  999.0   !  16  sugarcane
 #========================================================================
 
 #---------------------------------------------------------------------------------
