@@ -89,15 +89,15 @@ c 16: sugarcane
 # coefb    : 'b' coefficients for stomatal conductance relationship
 # gsmin    : absolute minimum stomatal conductances
 #-------------------------------------------------
-# gamma  coefm       coefb           gsmin   Physiol. Class
-#----------------------------------------------------------------
-  0.015   10.0        0.01         0.00001  ! Broadleaf trees
-  0.015    6.0        0.01         0.00001  ! Conifer trees 
-  0.015    9.0        0.01         0.00001  ! Shrubs
-  0.030    4.0        0.04         0.00001  ! C4 grasses
-  0.015    9.0        0.01         0.00001  ! C3 grasses
-  0.015	   9.0        0.01         0.00001  ! C3 crops (SOJA)
-  0.012	   2.6        0.04         0.00001  ! C4 crops
+# gamma        coefm       coefb           gsmin   Physiol. Class
+#-----------------------------------------------------------------------
+  0.015         10.0        0.01         0.00001  ! Broadleaf trees
+  0.015          6.0        0.01         0.00001  ! Conifer trees 
+  0.015          9.0        0.01         0.00001  ! Shrubs
+  0.030          4.0        0.04         0.00001  ! C4 grasses
+  0.015          9.0        0.01         0.00001  ! C3 grasses
+  0.015	         9.0        0.01         0.00001  ! C3 crops (SOJA)
+  0.012	         2.6        0.04         0.00001  ! C4 crops
 #  0.015	   9.0   0.01  0.00001  ! C3 crops (original..)
 #=================================================
 
